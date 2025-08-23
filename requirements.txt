@@ -1,5 +1,12 @@
 scikit-learn
 pandas
 numpy
-fastapi uvicorn
+fastapi
+uvicorn
+pydantic
 python-multipart
+joblib
+google-cloud-storage
+opencv-python
+easyocr
+rapidfuzz
