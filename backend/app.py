@@ -1,14 +1,15 @@
 import os
 import json
-import random
-import string
+import uuid
 from datetime import datetime
 
-from fastapi import FastAPI, File, UploadFile, Form
+from fastapi import FastAPI, File, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
 from pydantic import BaseModel
 
 from db import save_to_database, get_status, get_reports, update_status
+from storage import upload_file, download_file, delete_file
 from ocr import extract_info
 from svm import sentiment_classification, category_classification
 
@@ -40,6 +41,8 @@ class ReportData(BaseModel):
     category: str
     message: str
     sentiment: str
+    ktp_blob: str
+    bukti_blob: str
 
 class StatusData(BaseModel):
     ticket: str
@@ -52,21 +55,50 @@ def load_json(path):
 
 def generate_ticket_id():
     timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
-    rand_str = ''.join(random.choices(string.ascii_uppercase + string.digits, k=4))
-    return f"TCK-{timestamp}-{rand_str}"
+    random_str = uuid.uuid4().hex[:5].upper()
+    return f"TCK-{timestamp}-{random_str}"
 
-@app.post("/upload_ktp")
-async def upload_ktp_endpoint(file: UploadFile = File(...)):
+# @app.post("/upload_ktp")
+# async def upload_ktp_endpoint(file: UploadFile = File(...)):
+#     contents = await file.read()
+#     extension = os.path.splitext(file.filename)[1]
+#     random_str = uuid.uuid4().hex[:10]
+#     upload_file(contents, f"ktp_{random_str}{extension}")
+#     nik, nama, gender = extract_info(contents)
+#     return {"nik": nik, "nama": nama, "gender": gender}
+
+# @app.post("/upload_bukti")
+# async def upload_bukti_endpoint(file: UploadFile = File(...)):
+#     contents = await file.read()
+#     extension = os.path.splitext(file.filename)[1]
+#     random_str = uuid.uuid4().hex[:10]
+#     upload_file(contents, f"bukti_{random_str}{extension}")
+
+# @app.get("/download/{file_type}/{blob_name}")
+# def download(file_type: str, blob_name: str):
+#     local_path = download_file(blob_name, f"temp_{blob_name}")
+#     return FileResponse(local_path, filename=blob_name, media_type="application/octet-stream")
+
+@app.post("/extract_info")
+async def extract_info_endpoint(file: UploadFile = File(...)):
     contents = await file.read()
     nik, nama, gender = extract_info(contents)
     return {"nik": nik, "nama": nama, "gender": gender}
 
-@app.post("/upload_bukti")
-async def upload_bukti_endpoint(file: UploadFile = File(...)):
-    file_path = os.path.join(UPLOAD_DIR, file.filename)
-    with open(file_path, "wb") as f:
-        f.write(await file.read())
-    return {"filename": file.filename, "saved_to": file_path}
+@app.post("/upload_image")
+async def upload_image_endpoint(file: UploadFile = File(...)):
+    contents = await file.read()
+    extension = os.path.splitext(file.filename)[1]
+    random_str = uuid.uuid4().hex[:12]
+    bucket_name, blob_name = upload_file(contents, f"img_{random_str}{extension}")
+    blob = bucket_name.blob(blob_name)
+    blob.make_public()
+    return {"bucket_name": bucket_name, "blob_name": blob_name}
+
+@app.delete("/delete_image/{file_type}/{blob_name}")
+async def delete_image_endpoint(file_type: str, blob_name: str):
+    delete_file(blob_name)
+    return {"blob_name": blob_name}
 
 @app.post("/chat")
 async def chat_endpoint(data: UserMessage):
@@ -97,6 +129,8 @@ async def save_report_endpoint(data: ReportData):
         "message": data.message,
         "sentiment": data.sentiment,
         "time": datetime.now(),
+        "ktp_blob": data.ktp_blob,
+        "bukti_blob": data.bukti_blob,
         "status": "Belum selesai"
     }
     save_to_database(row)

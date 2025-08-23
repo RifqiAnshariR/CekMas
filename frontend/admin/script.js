@@ -66,6 +66,8 @@ function displayReports() {
             <td>${r.pesan || ''}</td>
             <td>${r.sentimen || ''}</td>
             <td>${r.waktu || ''}</td>
+            <td>${r.ktp_blob || ''}</td>
+            <td>${r.bukti_blob || ''}</td>
             <td>${r.status || ''}</td>
             <td class="actions">
             <button class="btn-pending" onclick="updateStatus('${r.ticket}', 'Belum selesai')">Belum selesai</button>

@@ -57,15 +57,22 @@ async function submitImage() {
     formData.append("file", input.files[0]);
 
     try {
-        const res = await fetch("http://127.0.0.1:8000/upload_ktp", {
+        const uploadRes = await fetch("http://127.0.0.1:8000/upload_image", {
             method: "POST",
             body: formData
         });
-        const data = await res.json();
+        const uploadData = await uploadRes.json();
+        const publicUrl = `https://storage.googleapis.com/${uploadData.bucket_name}/${uploadData.blob_name}`;
+        sessionStorage.setItem("ktp_blob", publicUrl);
 
-        document.getElementById("nik").value = data.nik;
-        document.getElementById("name").value = data.nama;
-        if (data.gender === "LAKI LAKI") {
+        const extractRes = await fetch("http://127.0.0.1:8000/extract_info", {
+            method: "POST",
+            body: formData
+        });
+        const extractData = await extractRes.json();
+        document.getElementById("nik").value = extractData.nik;
+        document.getElementById("name").value = extractData.nama;
+        if (extractData.gender === "LAKI LAKI") {
             document.getElementById("laki").checked = true;
         } else {
             document.getElementById("perempuan").checked = true;
@@ -98,7 +105,7 @@ async function submitData() {
     goToPage("page4");
 }
 
-async function saveReport(email, nik, name, location, message, category, sentiment) {
+async function saveReport(email, nik, name, location, message, category, sentiment, ktp_blob, bukti_blob) {
     try {
         const res = await fetch("http://127.0.0.1:8000/save_report", {
             method: "POST",
@@ -110,7 +117,9 @@ async function saveReport(email, nik, name, location, message, category, sentime
                 location: location,
                 message: message,
                 category: category,
-                sentiment: sentiment
+                sentiment: sentiment,
+                ktp_blob: ktp_blob,
+                bukti_blob: bukti_blob
             })
         });
         const data = await res.json();
@@ -152,11 +161,14 @@ function addImageMessage(className) {
         formData.append("file", file);
 
         try {
-            const res = await fetch("http://127.0.0.1:8000/upload_bukti", {
+            const res = await fetch("http://127.0.0.1:8000/upload_image", {
                 method: "POST",
                 body: formData
             });
             const data = await res.json();
+            const publicUrl = `https://storage.googleapis.com/${data.bucket_name}/${data.blob_name}`;
+            sessionStorage.setItem("bukti_blob", publicUrl);
+
             getResponse(4, "")
         } catch (err) {
             addMessage("Error: " + err + ". Tolong refresh browser anda.", "botBubble");
