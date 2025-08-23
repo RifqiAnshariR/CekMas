@@ -1,0 +1,309 @@
+teks,sentiment
+"Saya puas dengan perbaikan jalan di desa kami",positif
+"Pelayanan di kantor desa sangat cepat dan ramah",positif
+"Fasilitas pendidikan di desa makin berkembang pesat",positif
+"Pelayanan administrasi kependudukan sangat memuaskan",positif
+"Saya merasa lingkungan lebih sehat berkat program sanitasi desa",positif
+"Petugas desa sangat cepat tanggap ketika ada keluhan",positif
+"Terima kasih atas pembangunan fasilitas baru di desa kami",positif
+"Saya sangat bangga dengan kemajuan desa kami akhir-akhir ini",positif
+"Pelayanan di kantor desa sangat efisien dan tidak berbelit",positif
+"Saya senang lingkungan desa makin hijau dan terawat",positif
+"Saya kecewa jalan desa masih banyak berlubang dan berdebu",negatif
+"Pengaduan saya lambat ditanggapi, membuat saya kesal",negatif
+"Lampu jalan sering mati sehingga terasa rawan saat malam",negatif
+"Air bersih di rumah saya sering mati tanpa pemberitahuan",negatif
+"Terima kasih atas perbaikan lampu jalan yang sudah dilakukan",positif
+"Air bersih sudah lancar mengalir ke rumah saya, sangat bersyukur",positif
+"Saya senang pengaduan saya langsung ditindaklanjuti dengan cepat",positif
+"Petugas sangat membantu dan responsif dalam menangani keluhan kami",positif
+"Saya bangga dengan pelayanan kesehatan di puskesmas desa",positif
+"Fasilitas umum di lingkungan saya kini jauh lebih baik",positif
+"Terima kasih atas pembangunan jembatan baru yang sangat bermanfaat",positif
+"Saya merasa aman dengan adanya patroli keamanan rutin",positif
+"Pengelolaan sampah di desa semakin tertata rapi",positif
+"Pelayanan di kantor kelurahan sangat profesional dan ramah",positif
+"Terima kasih atas bantuan sosial yang diberikan tepat waktu",positif
+"Saya senang fasilitas olahraga desa makin lengkap dan terawat",positif
+"Perbaikan jalan di dusun kami membuat perjalanan jadi lancar",positif
+"Saya apresiasi respons cepat dari petugas terhadap laporan saya",positif
+"Pelayanan administrasi desa sangat mudah dan transparan",positif
+"Terima kasih atas peningkatan layanan kesehatan di desa",positif
+"Saya senang lingkungan desa makin bersih dan nyaman",positif
+"Pelayanan administrasi di kantor desa sangat lambat dan membingungkan",negatif
+"Sampah di sekitar lingkungan menumpuk dan tidak segera diangkut",negatif
+"Petugas pengaduan kurang ramah dan sulit dihubungi",negatif
+"Jalan menuju sekolah rusak parah dan membahayakan anak-anak",negatif
+"Fasilitas umum kurang terawat dan banyak yang rusak",negatif
+"Saya merasa keluhan saya tidak dianggap serius oleh petugas",negatif
+"Saya Rifqi, sangat kecewa jalan di desa rusak parah",negatif
+"Pak, jalan depan rumah saya berlubang besar, mohon diperbaiki",negatif
+"Nama saya Budi, jalan menuju pasar rusak parah setelah hujan",negatif
+"Halo, saya Dewi. Jalan di RT 05 banyak lubang, berbahaya untuk motor",negatif
+"Selamat pagi, saya Hendra. Jalan utama desa retak-retak",negatif
+"Saya Kartini, jalan kampung becek dan berlumpur terus",negatif
+"Pak RT, jalan di gang sempit rusak total",negatif
+"Halo, saya Ahmad. Aspal jalan mulai mengelupas",negatif
+Jalan depan sekolah kondisinya memprihatinkan,negatif
+"Saya Indira, jalan ke puskesmas rusak berat",negatif
+"Pak, mohon perhatian jalan lingkungan kami ya",negatif
+"Alhamdulillah jalan sudah diperbaiki dengan baik, terima kasih",positif
+Wah bagus sekali jalan baru sudah mulus,positif
+Terima kasih banyak atas perbaikan jalan kampung kami,positif
+"Jalan sudah diaspal dengan rapi, sangat puas",positif
+Terima kasih sudah memperbaiki listrik di rumah saya,positif
+Listrik di rumah saya mati sejak kemarin sore,negatif
+"Perbaikan drainase berjalan lancar, tidak ada lagi banjir",positif
+"Saya sangat puas dengan pelayanan pengurusan KTP yang cepat",positif
+"Halo, saya Fitri. Listrik sering mati hidup",negatif
+"Nama saya Tono, mohon cek meteran listrik rusak",negatif
+"Pak, tiang listrik di jalan roboh kena angin",negatif
+"Saya merasa didengar saat melapor masalah kebersihan lingkungan",positif
+"Petugas kebersihan bekerja dengan sangat baik di sekitar sini",positif
+"Terima kasih sudah memperbaiki taman bermain anak-anak di desa",positif
+"Saya Ratna, kabel listrik putus di depan rumah",negatif
+"Halo, listrik kampung kami padam total",negatif
+"Saya Agus, trafo listrik sepertinya bermasalah",negatif
+"Pak petugas, listrik drop terus di malam hari",negatif
+"Nama saya Eka, mohon perbaikan sambungan listrik",negatif
+"Listrik rumah konslet, butuh bantuan teknisi",negatif
+Alhamdulillah listrik sudah normal kembali,positif
+Terima kasih tim PLN sudah cepat menangani,positif
+"Listrik sudah stabil, pelayanan memuaskan",positif
+"Bagus, perbaikan listrik sangat profesional",positif
+"Halo, saya Sinta. Air sudah mengalir lancar, terima kasih",positif
+Air PDAM tidak mengalir sejak 3 hari,negatif
+"Halo, saya Maya. Air keruh dan bau",negatif
+"Nama saya Dedi, pipa air bocor besar",negatif
+Air sumur warga mengering,negatif
+"Saya Lina, tekanan air sangat lemah",negatif
+"Terima kasih sudah memperbaiki fasilitas olahraga anak-anak",positif
+"Saya senang desa kami makin maju dengan banyak program baru",positif
+"Pelayanan di puskesmas sangat ramah dan profesional",positif
+"Terima kasih atas perhatian pemerintah terhadap masalah kami",positif
+"Pengaduan saya ditanggapi dengan baik dan cepat",positif
+"Pak, pompa air rusak di kampung kami",negatif
+Air ledeng mati total di perumahan,negatif
+"Saya Bambang, air berwarna kuning",negatif
+"Saya puas dengan kualitas air bersih yang tersedia sekarang",positif
+"Fasilitas jalan desa makin bagus dan aman untuk dilalui",positif
+"Halo, meteran air tidak berfungsi",negatif
+Air berbau kaporit terlalu kuat,negatif
+Alhamdulillah air sudah jernih dan lancar,positif
+Terima kasih perbaikan pipa air sangat cepat,positif
+"Air PDAM sudah normal, pelayanan bagus",positif
+Pompa air baru bekerja dengan baik,positif
+"Saya Joko, mohon perbaikan lampu jalan mati",negatif
+Lampu jalan di depan gang mati semua,negatif
+"Halo, saya Retno. Lampu penerangan jalan redup",negatif
+"Nama saya Galih, mohon pasang lampu jalan baru",negatif
+"Terima kasih atas penanganan banjir yang cepat dan tepat",positif
+"Saya merasa pelayanan publik di desa semakin transparan",positif
+"Petugas kebersihan sangat disiplin dan bertanggung jawab",positif
+Lampu jalan putus kena pohon tumbang,negatif
+"Saya Nurul, jalan gelap total di malam hari",negatif
+"Pak RT, lampu jalan sudah rusak berbulan-bulan",negatif
+Tiang lampu jalan miring dan berbahaya,negatif
+"Saya Wawan, kabel lampu jalan terputus",negatif
+Lampu jalan kedip-kedip tidak normal,negatif
+Mohon tambah lampu jalan di tikungan,negatif
+Terima kasih lampu jalan sudah diperbaiki,positif
+Lampu LED baru sangat terang dan bagus,positif
+Penerangan jalan kini lebih aman,positif
+Alhamdulillah lampu jalan berfungsi normal,positif
+"Nama saya Andi, banjir lagi di kampung kami",negatif
+Setiap hujan pasti banjir di sini,negatif
+"Halo, saya Yani. Saluran air tersumbat sampah",negatif
+"Nama saya Rudi, got mampet parah",negatif
+Air hujan menggenang tidak surut-surut,negatif
+"Saya Sari, drainase perlu dibersihkan",negatif
+"Pak, selokan penuh lumpur dan sampah",negatif
+Banjir kiriman dari hulu sungai,negatif
+"Saya Hadi, pompa drainase tidak bekerja",negatif
+Saluran pembuangan air rusak total,negatif
+Jalan raya tergenang air setinggi mata kaki,negatif
+Terima kasih sudah membersihkan saluran air,positif
+"Drainase sudah lancar, tidak banjir lagi",positif
+Pompa air bekerja dengan baik,positif
+Alhamdulillah tidak ada genangan lagi,positif
+TPS sampah sudah penuh dan berbau,negatif
+"Halo, saya Ani. Sampah tidak diangkut seminggu",negatif
+"Nama saya Joni, truk sampah jarang lewat",negatif
+Sampah berserakan di pinggir jalan,negatif
+"Saya Dina, tempat sampah rusak dan kotor",negatif
+"Pak petugas, jadwal pengangkutan tidak teratur",negatif
+Sampah menumpuk sampai ke jalan raya,negatif
+"Saya Bayu, butuh tambahan tempat sampah",negatif
+Sampah organik tidak dipisah dengan baik,negatif
+Truk sampah rusak sering mogok,negatif
+Terima kasih sampah sudah diangkut rutin,positif
+Tempat sampah baru sangat bersih,positif
+Pelayanan pengangkutan sampah meningkat,positif
+"Bagus, lingkungan jadi lebih bersih",positif
+Puskesmas kekurangan obat untuk diabetes,negatif
+"Halo, saya Ida. Dokter jarang ada di puskesmas",negatif
+"Nama saya Feri, antrian puskesmas terlalu panjang",negatif
+Ambulans desa rusak tidak bisa dipakai,negatif
+"Saya Tuti, fasilitas puskesmas kurang lengkap",negatif
+"Pak dokter, jam buka puskesmas terlalu singkat",negatif
+Obat-obatan sering kosong di apotek desa,negatif
+"Saya Alam, perawat kurang ramah",negatif
+Ruang tunggu puskesmas kotor dan sempit,negatif
+Alat kesehatan di puskesmas banyak yang rusak,negatif
+Terima kasih pelayanan puskesmas sangat baik,positif
+Dokter baru sangat ramah dan profesional,positif
+Obat sudah lengkap tersedia,positif
+Alhamdulillah fasilitas puskesmas memadai,positif
+Sekolah kekurangan guru matematika,negatif
+"Halo, saya Rini. Atap sekolah bocor saat hujan",negatif
+"Nama saya Cahyo, buku pelajaran belum datang",negatif
+Fasilitas laboratorium sekolah rusak,negatif
+"Saya Lia, WC sekolah kotor dan bau",negatif
+"Pak kepala sekolah, meja kursi siswa patah",negatif
+Internet sekolah sering putus-putus,negatif
+"Saya Yoga, perpustakaan sekolah sepi",negatif
+Lapangan sekolah rusak dan berbahaya,negatif
+Kantin sekolah kurang bersih,negatif
+Terima kasih guru baru sangat kompeten,positif
+Fasilitas sekolah sudah diperbaiki,positif
+Buku pelajaran sudah distribusi merata,positif
+Program sekolah semakin berkualitas,positif
+Maling sering masuk kampung di malam hari,negatif
+"Halo, saya Doni. Pos kamling tidak dijaga",negatif
+"Nama saya Sri, penerangan jalan kurang",negatif
+Banyak pemuda nongkrong sambil mabuk,negatif
+"Saya Ade, motor hilang di depan rumah",negatif
+"Pak RT, perlu ronda malam rutin",negatif
+Geng motor sering lewat bikin gaduh,negatif
+"Saya Nina, rumah dibobol pencuri",negatif
+"Pelayanan di posyandu sangat ramah dan membantu",positif
+"Terima kasih sudah menambah lampu penerangan jalan malam hari",positif
+"Saya puas dengan program pemberdayaan masyarakat yang dijalankan",positif
+"Petugas di kantor desa sangat profesional dan sabar",positif
+Jalan sepi rawan kejahatan,negatif
+Pos polisi jarang ada petugas,negatif
+Terima kasih ronda sudah rutin lagi,positif
+Situasi kampung sudah lebih aman,positif
+Pos kamling sudah aktif kembali,positif
+Polsek responsif menangani laporan,positif
+Angkot jarang lewat dan tidak on time,negatif
+"Halo, saya Vina. Halte bus rusak dan kotor",negatif
+"Nama saya Rio, ongkos angkot naik terus",negatif
+Jalan tidak ada marka dan rambu,negatif
+"Saya Meta, ojek online susah di daerah sini",negatif
+"Pak, terminal becek dan berlumpur",negatif
+Sopir angkot sering ngebut bahaya,negatif
+"Saya Rangga, jembatan penyeberangan rusak",negatif
+Parkir liar bikin macet,negatif
+Bis kota jarang masuk kampung,negatif
+Terima kasih angkot sudah teratur,positif
+Halte bus sudah diperbaiki rapi,positif
+Akses transportasi semakin baik,positif
+Marka jalan sudah jelas dan aman,positif
+Pasar tradisional kotor dan bau,negatif
+"Halo, saya Wati. Kios pasar bocor saat hujan",negatif
+"Nama saya Eko, retribusi pasar terlalu mahal",negatif
+Pedagang kaki lima sembarangan,negatif
+"Saya Rina, parkir pasar sempit",negatif
+"Pak lurah, pasar butuh renovasi",negatif
+Toilet pasar sangat kotor,negatif
+"Saya Agung, pedagang bandel parkir dimana-mana",negatif
+Drainase pasar tersumbat,negatif
+Lampu pasar sering mati,negatif
+Terima kasih pasar sudah lebih bersih,positif
+Renovasi pasar sangat memuaskan,positif
+Fasilitas pasar semakin lengkap,positif
+Tata kelola pasar sudah tertib,positif
+Sungai tercemar limbah pabrik,negatif
+"Halo, saya Desi. Udara bau dari TPA",negatif
+"Nama saya Gani, pohon ditebang sembarangan",negatif
+Pencemaran air sumur warga,negatif
+"Saya Mira, asap pabrik ganggu pernapasan",negatif
+"Pak RT, banyak sampah plastik di sungai",negatif
+Polusi suara dari pabrik 24 jam,negatif
+"Saya Hari, tanah longsor karena gundul",negatif
+Pembakaran sampah bikin asap tebal,negatif
+Limbah rumah tangga mencemari got,negatif
+"Terima kasih atas renovasi balai desa yang membuatnya lebih nyaman",positif
+"Saya merasa pengaduan saya benar-benar diperhatikan",positif
+"Pelayanan publik di desa semakin cepat dan efisien",positif
+Terima kasih program penghijauan,positif
+Sungai sudah lebih bersih,positif
+Bank sampah berjalan dengan baik,positif
+Lingkungan jadi lebih asri,positif
+Pelayanan RT lambat dan berbelit,negatif
+"Halo, saya Kris. KTP susah diurus",negatif
+"Nama saya Yuli, surat tidak kunjung jadi",negatif
+Perangkat desa jarang ada,negatif
+"Saya Arif, biaya surat terlalu mahal",negatif
+"Pak sekdes, pelayanan kurang ramah",negatif
+Dokumen hilang di kantor desa,negatif
+"Saya Novi, antrian administrasi panjang",negatif
+Jam kerja perangkat tidak jelas,negatif
+Prosedur terlalu rumit dan lama,negatif
+Terima kasih pelayanan cepat dan ramah,positif
+Surat sudah jadi tepat waktu,positif
+Perangkat desa sangat helpful,positif
+Prosedur sudah disederhanakan,positif
+"Ya ampun, jalan rusak banget nih depan rumah",negatif
+"Waduh pak, listrik mati lagi dari tadi pagi",negatif
+"Aduh, tiap hujan pasti kebanjiran deh",negatif
+"Gimana nih pak RT, sampah numpuk terus",negatif
+Kok lampu jalan mati melulu ya,negatif
+"Mohon bantuannya dong, air gak keluar",negatif
+"Pusing deh, motor dicuri maling",negatif
+Capek nungguin angkot lama banget,negatif
+"Serius nih, pasar bau dan jorok",negatif
+Kasihan anak-anak sekolah atapnya bocor,negatif
+Makasih banyak ya sudah diperbaiki,positif
+Seneng banget listrik udah normal,positif
+Alhamdulillah gak banjir lagi,positif
+"Top deh, sampahnya rutin diangkut",positif
+"Mantap, lampu jalan terang semua",positif
+Syukur air udah lancar lagi,positif
+"Aman nih sekarang, ronda aktif",positif
+Enak sekarang angkot teratur,positif
+Bagus pasar udah bersih dan rapi,positif
+Keren sekolah fasilitasnya lengkap,positif
+"Saya Bapak Sumarno dari Jl. Mawar No. 15, jalan depan rumah rusak parah",negatif
+"Ibu Sartika RT 03 RW 02, listrik sering padam",negatif
+"Nama lengkap saya Agus Wijaya, alamat Gang Melati 10",negatif
+"Perkenalkan saya Dwi Rahayu, tinggal di Perumahan Indah",negatif
+Saya Abdul Rahman warga Kampung Baru,negatif
+Ibu Endah Susilowati dari RT 05,negatif
+"Bapak Heri Susanto, alamat Jl. Kenanga",negatif
+Saya Ibu Retno Wulandari RT 07 RW 03,negatif
+"Muhammad Fadli, mahasiswa semester 5",negatif
+"Saya senang dengan adanya akses internet gratis di balai desa",positif
+"Terima kasih atas perbaikan saluran air yang tidak bocor lagi",positif
+Ibu Guru Nurhayati SD Harapan Bangsa,negatif
+URGENT! Pohon tumbang timpa kabel listrik,negatif
+"Mohon segera ditangani, anak kecil bisa terjatuh ke lubang",negatif
+Darurat! Banjir sudah masuk rumah,negatif
+"Tolong cepat, sampah sudah sangat bau",negatif
+Bahaya! Tiang lampu miring mau roboh,negatif
+"Emergency, air bersih terkontaminasi",negatif
+"Minta bantuan segera, ada pencurian",negatif
+Butuh perhatian khusus untuk anak berkebutuhan khusus,negatif
+Kondisi pasar sudah tidak layak,negatif
+Situasi transportasi sangat mendesak,negatif
+Saya marah banget dengan kondisi jalan ini!,negatif
+Sedih lihat anak-anak main di tempat kotor,negatif
+Khawatir dengan keamanan lingkungan,negatif
+Frustasi dengan pelayanan yang lambat,negatif
+Kecewa dengan fasilitas yang tidak terawat,negatif
+Geram dengan pencemaran lingkungan,negatif
+Lelah menunggu perbaikan yang tak kunjung datang,negatif
+Takut berjalan di jalan yang gelap,negatif
+Stress karena selalu banjir,negatif
+Jengkel dengan transportasi yang tidak teratur,negatif
+Senang sekali ada perubahan positif,positif
+Bangga dengan kemajuan kampung kami,positif
+Bahagia melihat lingkungan bersih,positif
+Lega masalah sudah teratasi,positif
+Puas dengan pelayanan yang prima,positif
+Kagum dengan fasilitas baru,positif
+Terharu dengan perhatian pemerintah,positif
+Optimis dengan masa depan yang cerah,positif
+Tenang karena tidak ada banjir lagi,positif
+Nyaman dengan transportasi yang lancar,positif

@@ -1,0 +1,158 @@
+{
+  "jalan rusak": {
+    "negatif": {
+      "respon": "Terima kasih atas laporannya, akan kami tindak lanjuti. Untuk informasi lebih lanjut silakan hubungi {kontak}.",
+      "follow_up_1": "Mohon diinformasikan lokasi jalan yang rusak.",
+      "follow_up_2": "Sejak kapan kerusakan jalan tersebut terjadi?"
+    },
+    "positif": {
+      "respon": "Terima kasih atas apresiasinya terhadap kondisi jalan di wilayah Anda. Kami akan terus berupaya menjaga kualitas infrastruktur demi kenyamanan masyarakat.",
+      "follow_up_1": "Mohon diinformasikan lokasi jalan tersebut.",
+      "follow_up_2": "Apakah ada masukan lain terkait kondisi jalan di wilayah tersebut?"
+    }
+  },
+  "listrik": {
+    "negatif": {
+      "respon": "Terima kasih atas laporannya, akan kami tindak lanjuti. Untuk informasi lebih lanjut silakan hubungi {kontak}.",
+      "follow_up_1": "Mohon diinformasikan lokasi wilayah yang mengalami gangguan listrik.",
+      "follow_up_2": "Sejak kapan gangguan listrik tersebut terjadi?"
+    },
+    "positif": {
+      "respon": "Terima kasih atas apresiasinya. Kami akan terus berupaya meningkatkan keandalan layanan listrik untuk masyarakat.",
+      "follow_up_1": "Mohon diinformasikan lokasi wilayah tersebut.",
+      "follow_up_2": "Apakah ada masukan lain terkait layanan listrik di wilayah tersebut?"
+    }
+  },
+  "air bersih": {
+    "negatif": {
+      "respon": "Terima kasih atas laporannya, akan kami tindak lanjuti. Untuk informasi lebih lanjut silakan hubungi {kontak}.",
+      "follow_up_1": "Mohon diinformasikan lokasi yang mengalami gangguan air bersih.",
+      "follow_up_2": "Sejak kapan gangguan air bersih tersebut terjadi?"
+    },
+    "positif": {
+      "respon": "Terima kasih atas apresiasinya. Kami berkomitmen untuk terus menyediakan layanan air bersih yang optimal bagi masyarakat.",
+      "follow_up_1": "Mohon diinformasikan lokasi wilayah tersebut.",
+      "follow_up_2": "Apakah ada masukan lain terkait layanan air bersih di wilayah tersebut?"
+    }
+  },
+  "lampu jalan": {
+    "negatif": {
+      "respon": "Terima kasih atas laporannya, akan kami tindak lanjuti. Untuk informasi lebih lanjut silakan hubungi {kontak}.",
+      "follow_up_1": "Mohon diinformasikan lokasi lampu jalan yang bermasalah.",
+      "follow_up_2": "Sejak kapan lampu jalan tersebut tidak berfungsi?"
+    },
+    "positif": {
+      "respon": "Terima kasih atas apresiasinya terhadap fasilitas penerangan jalan. Kami akan terus meningkatkan kualitas pelayanan demi kenyamanan bersama.",
+      "follow_up_1": "Mohon diinformasikan lokasi lampu jalan tersebut.",
+      "follow_up_2": "Apakah ada masukan lain terkait penerangan jalan di wilayah tersebut?"
+    }
+  },
+  "banjir": {
+    "negatif": {
+      "respon": "Terima kasih atas laporannya, akan kami tindak lanjuti. Untuk informasi lebih lanjut silakan hubungi {kontak}.",
+      "follow_up_1": "Mohon diinformasikan lokasi banjir yang terjadi.",
+      "follow_up_2": "Berapa ketinggian air di lokasi tersebut (cm)?"
+    },
+    "positif": {
+      "respon": "Terima kasih atas apresiasinya. Kami akan terus berupaya menangani masalah banjir ini.",
+      "follow_up_1": "Mohon diinformasikan lokasi wilayah tersebut.",
+      "follow_up_2": "Apakah ada masukan lain terkait masalah banjir di wilayah tersebut?"
+    }
+  },
+  "sampah": {
+    "negatif": {
+      "respon": "Terima kasih atas laporannya, akan kami tindak lanjuti. Untuk informasi lebih lanjut silakan hubungi {kontak}.",
+      "follow_up_1": "Mohon diinformasikan lokasi penumpukan sampah.",
+      "follow_up_2": "Sejak kapan sampah tersebut menumpuk?"
+    },
+    "positif": {
+      "respon": "Terima kasih atas apresiasinya terhadap kinerja tim kebersihan. Kami akan terus menjaga kualitas layanan kebersihan kota.",
+      "follow_up_1": "Mohon diinformasikan lokasi wilayah tersebut.",
+      "follow_up_2": "Apakah ada masukan lain terkait pengelolaan sampah di wilayah tersebut?"
+    }
+  },
+  "kesehatan": {
+    "negatif": {
+      "respon": "Terima kasih atas laporannya, akan kami tindak lanjuti. Untuk informasi lebih lanjut silakan hubungi {kontak}.",
+      "follow_up_1": "Mohon diinformasikan nama atau lokasi fasilitas kesehatan tersebut.",
+      "follow_up_2": "Sejak kapan permasalahan layanan kesehatan ini terjadi?"
+    },
+    "positif": {
+      "respon": "Terima kasih atas apresiasinya. Kami akan terus meningkatkan mutu layanan kesehatan bagi masyarakat.",
+      "follow_up_1": "Mohon diinformasikan nama atau lokasi fasilitas kesehatan tersebut.",
+      "follow_up_2": "Apakah ada masukan lain terkait pelayanan kesehatan di wilayah tersebut?"
+    }
+  },
+  "pendidikan": {
+    "negatif": {
+      "respon": "Terima kasih atas laporannya, akan kami tindak lanjuti. Untuk informasi lebih lanjut silakan hubungi {kontak}.",
+      "follow_up_1": "Mohon diinformasikan nama sekolah yang dimaksud.",
+      "follow_up_2": "Apakah ada fasilitas atau kegiatan pendidikan lain yang bermasalah?"
+    },
+    "positif": {
+      "respon": "Terima kasih atas apresiasinya. Kami akan terus mendukung peningkatan kualitas pendidikan di sekolah-sekolah.",
+      "follow_up_1": "Mohon diinformasikan nama sekolah yang dimaksud.",
+      "follow_up_2": "Apakah ada masukan lain terkait fasilitas atau kegiatan sekolah?"
+    }
+  },
+  "keamanan": {
+    "negatif": {
+      "respon": "Terima kasih atas laporannya, akan kami tindak lanjuti. Untuk informasi lebih lanjut silakan hubungi {kontak}.",
+      "follow_up_1": "Mohon diinformasikan lokasi kejadian tersebut.",
+      "follow_up_2": "Kapan peristiwa tersebut terjadi?"
+    },
+    "positif": {
+      "respon": "Terima kasih atas apresiasinya. Kami akan terus meningkatkan pengawasan keamanan demi kenyamanan masyarakat.",
+      "follow_up_1": "Mohon diinformasikan lokasi wilayah tersebut.",
+      "follow_up_2": "Apakah ada masukan lain terkait keamanan di wilayah tersebut?"
+    }
+  },
+  "transportasi": {
+    "negatif": {
+      "respon": "Terima kasih atas laporannya, akan kami tindak lanjuti. Untuk informasi lebih lanjut silakan hubungi {kontak}.",
+      "follow_up_1": "Mohon diinformasikan lokasi atau rute transportasi yang bermasalah.",
+      "follow_up_2": "Sejak kapan masalah transportasi ini terjadi?"
+    },
+    "positif": {
+      "respon": "Terima kasih atas apresiasinya. Kami berkomitmen untuk terus meningkatkan layanan transportasi publik.",
+      "follow_up_1": "Mohon diinformasikan lokasi atau rute transportasi tersebut.",
+      "follow_up_2": "Apakah ada masukan lain terkait transportasi publik di wilayah tersebut?"
+    }
+  },
+  "ekonomi": {
+    "negatif": {
+      "respon": "Terima kasih atas laporannya, akan kami tindak lanjuti. Untuk informasi lebih lanjut silakan hubungi {kontak}.",
+      "follow_up_1": "Mohon diinformasikan lokasi pasar atau area ekonomi yang dimaksud.",
+      "follow_up_2": "Komoditas atau kegiatan ekonomi apa yang terdampak?"
+    },
+    "positif": {
+      "respon": "Terima kasih atas apresiasinya. Kami akan terus mendukung perekonomian masyarakat.",
+      "follow_up_1": "Mohon diinformasikan lokasi pasar atau area ekonomi yang dimaksud.",
+      "follow_up_2": "Apakah ada masukan lain terkait kegiatan ekonomi di wilayah tersebut?"
+    }
+  },
+  "lingkungan": {
+    "negatif": {
+      "respon": "Terima kasih atas laporannya, akan kami tindak lanjuti. Untuk informasi lebih lanjut silakan hubungi {kontak}.",
+      "follow_up_1": "Mohon diinformasikan lokasi kejadian yang dimaksud.",
+      "follow_up_2": "Apa dampak lingkungan yang paling dirasakan akibat masalah ini?"
+    },
+    "positif": {
+      "respon": "Terima kasih atas apresiasinya. Kami akan terus menjaga kelestarian lingkungan untuk masyarakat.",
+      "follow_up_1": "Mohon diinformasikan lokasi kejadian yang dimaksud.",
+      "follow_up_2": "Apakah ada masukan lain terkait lingkungan di wilayah tersebut?"
+    }
+  },
+  "administrasi": {
+    "negatif": {
+      "respon": "Terima kasih atas laporannya, akan kami tindak lanjuti. Untuk informasi lebih lanjut silakan hubungi {kontak}.",
+      "follow_up_1": "Mohon diinformasikan kantor atau layanan administrasi yang dimaksud.",
+      "follow_up_2": "Jenis layanan administrasi apa yang mengalami kendala?"
+    },
+    "positif": {
+      "respon": "Terima kasih atas apresiasinya. Kami berkomitmen untuk terus meningkatkan kualitas layanan administrasi publik.",
+      "follow_up_1": "Mohon diinformasikan kantor atau layanan administrasi yang dimaksud.",
+      "follow_up_2": "Apakah ada masukan lain terkait layanan administrasi di wilayah tersebut?"
+    }
+  }
+}

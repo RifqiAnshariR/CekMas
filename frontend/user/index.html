@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CekMas</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Page 1 -->
+    <div id="page1" class="page visible">
+        <h1>Selamat Datang!</h1>
+        <img src="./asset/logo.png" alt="Logo">
+        <p>CekMas adalah layanan pelaporan interaktif masyarakat yang didukung oleh pemerintah daerah.</p>
+        <button id="statusBtn">Cek Status</button>
+        <button id="startBtn">Mulai Chat</button>
+        <footer>© 2025 CekMas</footer>
+    </div>
+    <!-- Page 2 -->
+    <div id="page2" class="page">
+        <button class="home-btn" onclick="location.reload()">&#8962;</button>
+        <h1>Upload Gambar</h1>
+        <img src="./asset/logo.png" alt="Logo">
+        <input type="file" id="imageInput" accept="image/*" />
+        <button id="submitImageBtn">Submit</button>
+        <footer>© 2025 CekMas</footer>
+    </div>
+    <!-- Page 3 -->
+    <div id="page3" class="page">
+        <button class="home-btn" onclick="location.reload()">&#8962;</button>
+        <h1>Isi Data</h1>
+        <img src="./asset/logo.png" alt="Logo">
+        <label>Email:</label>
+        <input type="text" id="email"/>
+        <label>Nik:</label>
+        <input type="text" id="nik"/>
+        <label>Nama:</label>
+        <input type="text" id="name"/>
+        <label>Jenis Kelamin:</label>
+        <div class="gender-options">
+            <input type="radio" id="laki" name="gender" value="LAKI LAKI">
+            <label for="laki">Laki-laki</label>
+            <input type="radio" id="perempuan" name="gender" value="PEREMPUAN">
+            <label for="perempuan">Perempuan</label>
+        </div>
+        <button id="submitDataBtn">Submit</button>
+        <footer>© 2025 CekMas</footer>
+    </div>
+    <!-- Page 4 -->
+    <div id="page4" class="page">
+        <button class="home-btn" onclick="location.reload()">&#8962;</button>
+        <h1>Chat</h1>
+        <img src="./asset/logo.png" alt="Logo">
+        <div id="chatBox"></div>
+        <input type="text" id="chatInput" placeholder="Tulis pesan..." />
+        <button id="sendMessageBtn">Kirim</button>
+        <footer>© 2025 CekMas</footer>
+    </div>
+    <!-- Page 5 -->
+    <div id="page5" class="page">
+        <button class="home-btn" onclick="location.reload()">&#8962;</button>
+        <h1>Terima Kasih!</h1>
+        <img src="./asset/logo.png" alt="Logo">
+        <p>Laporan Anda telah direkam. Silakan cek email secara berkala dan tunggu informasi selanjutnya.</p>
+        <button onclick="location.reload()">Beranda</button>
+        <footer>© 2025 CekMas</footer>
+    </div>
+    <!-- Page Status -->
+    <div id="statusPage" class="page">
+        <button class="home-btn" onclick="location.reload()">&#8962;</button>
+        <h1>Cek Status Laporan</h1>
+        <img src="./asset/logo.png" alt="Logo">
+        <div id="statusResult"></div>
+        <label>Tiket:</label>
+        <input type="text" id="ticket" />
+        <button id="submitTicketBtn">Submit</button>
+        <footer>© 2025 CekMas</footer>
+    </div>
+    <script type="module" src="./script.js"></script>
+</body>
+</html>

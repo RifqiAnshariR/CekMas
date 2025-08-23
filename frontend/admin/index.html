@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Page Login -->
+    <div id="loginPage" class="page visible">
+        <h1>Login Admin</h1>
+        <img src="./asset/logo.png" alt="Logo">
+        <form id="loginForm" onsubmit="handleLogin(event)">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+        <div id="errorMessage" class="error-message">Username atau password salah!</div>
+        <footer>© 2025 CekMas</footer>
+    </div>
+    <!-- Page Reports -->
+    <div id="reportsPage" class="page">
+        <div class="header-reports">
+            <h1>Daftar Laporan</h1>
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </div>
+        <img src="./asset/logo.png" alt="Logo">
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Cari tiket...">
+            <button onclick="loadReports()">Cari</button>
+        </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tiket</th>
+                        <th>Email</th>
+                        <th>NIK</th>
+                        <th>Nama</th>
+                        <th>Lokasi</th>
+                        <th>Kategori</th>
+                        <th>Pesan</th>
+                        <th>Sentimen</th>
+                        <th>Waktu</th>
+                        <th>Status</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="reportTable"></tbody>
+            </table>
+        </div>
+        <div class="pagination">
+            <button onclick="prevPage()">Prev</button>
+            <span id="pageInfo"></span>
+            <button onclick="nextPage()">Next</button>
+        </div>
+        <footer>© 2025 CekMas</footer>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
