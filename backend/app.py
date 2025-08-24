@@ -5,22 +5,21 @@ from datetime import datetime
 
 from fastapi import FastAPI, File, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse
 from pydantic import BaseModel
 
 from db import save_to_database, get_status, get_reports, update_status
-from storage import upload_file, download_file, delete_file
+from storage import upload_file, make_public_url
 from ocr import extract_info
 from svm import sentiment_classification, category_classification
 
-UPLOAD_DIR = "./uploads"
 RESPONSES = "./data/chatbot/response.json"
-os.makedirs(UPLOAD_DIR, exist_ok=True)
+CONTACTS = "./data/chatbot/contact.json"
 
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -58,27 +57,6 @@ def generate_ticket_id():
     random_str = uuid.uuid4().hex[:5].upper()
     return f"TCK-{timestamp}-{random_str}"
 
-# @app.post("/upload_ktp")
-# async def upload_ktp_endpoint(file: UploadFile = File(...)):
-#     contents = await file.read()
-#     extension = os.path.splitext(file.filename)[1]
-#     random_str = uuid.uuid4().hex[:10]
-#     upload_file(contents, f"ktp_{random_str}{extension}")
-#     nik, nama, gender = extract_info(contents)
-#     return {"nik": nik, "nama": nama, "gender": gender}
-
-# @app.post("/upload_bukti")
-# async def upload_bukti_endpoint(file: UploadFile = File(...)):
-#     contents = await file.read()
-#     extension = os.path.splitext(file.filename)[1]
-#     random_str = uuid.uuid4().hex[:10]
-#     upload_file(contents, f"bukti_{random_str}{extension}")
-
-# @app.get("/download/{file_type}/{blob_name}")
-# def download(file_type: str, blob_name: str):
-#     local_path = download_file(blob_name, f"temp_{blob_name}")
-#     return FileResponse(local_path, filename=blob_name, media_type="application/octet-stream")
-
 @app.post("/extract_info")
 async def extract_info_endpoint(file: UploadFile = File(...)):
     contents = await file.read()
@@ -90,22 +68,19 @@ async def upload_image_endpoint(file: UploadFile = File(...)):
     contents = await file.read()
     extension = os.path.splitext(file.filename)[1]
     random_str = uuid.uuid4().hex[:12]
-    bucket_name, blob_name = upload_file(contents, f"img_{random_str}{extension}")
-    blob = bucket_name.blob(blob_name)
-    blob.make_public()
-    return {"bucket_name": bucket_name, "blob_name": blob_name}
-
-@app.delete("/delete_image/{file_type}/{blob_name}")
-async def delete_image_endpoint(file_type: str, blob_name: str):
-    delete_file(blob_name)
-    return {"blob_name": blob_name}
+    blob_name = upload_file(contents, f"img_{random_str}{extension}")
+    public_url = make_public_url(blob_name)
+    return {"public_url": public_url}
 
 @app.post("/chat")
 async def chat_endpoint(data: UserMessage):
     category = category_classification(data.message)
     sentiment = sentiment_classification(data.message)
+    contacts = load_json(CONTACTS)
     responses = load_json(RESPONSES)
-    response = responses[category][sentiment]["respon"]
+    contact = contacts.get(category, "pusat")
+    res = responses[category][sentiment]["respon"]
+    response = res.replace("{kontak}", contact)
     follow_up_1 = responses[category][sentiment]["follow_up_1"]
     follow_up_2 = responses[category][sentiment]["follow_up_2"]
     return {

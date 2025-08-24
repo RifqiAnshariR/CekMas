@@ -17,6 +17,8 @@ def init_storage(bucket_name: str, location: str):
     bucket = client.bucket(bucket_name)
     bucket.location = location
     bucket = client.create_bucket(bucket)
+    bucket.add_lifecycle_delete_rule(age=30)        # 30 days period
+    bucket.patch()
 
 def init_db(db_name: str):
     conn = sqlite3.connect(db_name)

@@ -1,1 +1,1 @@
-from .utils import upload_file, download_file, delete_file
+from .utils import upload_file, make_public_url, delete_file

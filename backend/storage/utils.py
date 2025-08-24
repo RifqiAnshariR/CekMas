@@ -1,7 +1,6 @@
 import os
 from dotenv import load_dotenv
 from google.cloud import storage
-from PIL import Image
 
 load_dotenv()
 cred_path = os.getenv("GOOGLE_APPLICATION_CREDENTIALS")
@@ -12,15 +11,15 @@ BUCKET_NAME = "public-uploads-bucket"
 client = storage.Client()
 bucket = client.bucket(BUCKET_NAME)
 
-def upload_file(contents: bytes, bucket_name: str, blob_name: str):
+def upload_file(contents: bytes, blob_name: str):
     blob = bucket.blob(blob_name)
     blob.upload_from_string(contents)
-    return bucket_name, blob_name
+    return blob_name
 
-def download_file(blob_name: str, image_path: str):
+def make_public_url(blob_name: str):
     blob = bucket.blob(blob_name)
-    blob.download_to_filename(image_path)
-    return image_path
+    blob.make_public()
+    return blob.public_url
 
 def delete_file(blob_name: str):
     blob = bucket.blob(blob_name)

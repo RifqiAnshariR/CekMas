@@ -62,8 +62,7 @@ async function submitImage() {
             body: formData
         });
         const uploadData = await uploadRes.json();
-        const publicUrl = `https://storage.googleapis.com/${uploadData.bucket_name}/${uploadData.blob_name}`;
-        sessionStorage.setItem("ktp_blob", publicUrl);
+        sessionStorage.setItem("ktp_blob", uploadData.public_url);
 
         const extractRes = await fetch("http://127.0.0.1:8000/extract_info", {
             method: "POST",
@@ -166,10 +165,9 @@ function addImageMessage(className) {
                 body: formData
             });
             const data = await res.json();
-            const publicUrl = `https://storage.googleapis.com/${data.bucket_name}/${data.blob_name}`;
-            sessionStorage.setItem("bukti_blob", publicUrl);
+            sessionStorage.setItem("bukti_blob", data.public_url);
 
-            getResponse(4, "")
+            getResponse(4, "");
         } catch (err) {
             addMessage("Error: " + err + ". Tolong refresh browser anda.", "botBubble");
         }
@@ -226,6 +224,8 @@ function getResponse(state, message) {
     const message_1 = sessionStorage.getItem("message_1") || "";
     const message_2 = sessionStorage.getItem("message_2") || "";
     const message_3 = sessionStorage.getItem("message_3") || "";
+    const ktp_blob = sessionStorage.getItem("ktp_blob");
+    const bukti_blob = sessionStorage.getItem("bukti_blob")
 
     if (state === 0) {
         const pronoun = (gender === "LAKI LAKI") ? "Pak" : "Bu";
@@ -256,11 +256,14 @@ function getResponse(state, message) {
     else if (state === 4) {
         const location = message_2;
         const full_message = message_1 + ", " + message_3;
-        saveReport(email, nik, name, location, full_message, category, sentiment)
-            .then(ticket_id => {
-                addMessage(`Pesan sudah disimpan. Berikut nomer tiket anda: ${ticket_id}`, "botBubble");
+        saveReport(email, nik, name, location, full_message, category, sentiment, ktp_blob, bukti_blob)
+            .then(ticket => {
+                addMessage(`Pesan sudah disimpan. Berikut nomer tiket anda: ${ticket}`, "botBubble");
                 addMessage("Apakah ada hal lain yang ingin disampaikan? Ini akan membuat sesi laporan baru.", "botBubble");
                 sessionStorage.setItem("chatState", ++state);
+            })
+            .catch(err => {
+                addMessage("Error: " + err + "Tolong refresh browser anda.", "botBubble");
             });
     }
 
