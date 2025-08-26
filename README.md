@@ -4,7 +4,7 @@
 - **Verifikasi Identitas Otomatis**: OCR KTP untuk ekstraksi NIK, nama, dan jenis kelamin.  
 - **Formulir & Chat Interaktif**: Input laporan, upload bukti, serta respon AI otomatis.  
 - **Analisis AI**: Klasifikasi kategori laporan & analisis sentimen menggunakan SVM.  
-- **Penyimpanan Aman**: Data laporan, KTP, dan bukti tersimpan di SQL & Google Cloud Storage.  
+- **Penyimpanan Aman**: Data laporan, KTP, dan bukti tersimpan di SQL & Google Cloud Storage (Blob).  
 - **Dashboard Admin**: Login, pantau laporan, update status real-time.  
 - **Tiket Laporan**: Nomor unik untuk tracking status laporan.  
 
@@ -17,7 +17,34 @@
   - OCR untuk ekstraksi data KTP.  
   - SVM untuk klasifikasi laporan & sentimen.  
 
-## Alur Aplikasi
+## Alur Menjalankan Proyek
+- Clone repository. Di terminal: 
+```bash
+git clone https://github.com/RifqiAnshariR/CekMas.git
+```
+- Setup awal Google Cloud Storage (GCS):
+  - Buat storage GCS dan download file key.json.
+  - Buat file .env berisi path ke key.json dan simpan dalam GOOGLE_APPLICATION_CREDENTIALS.
+- Setup awal:
+```bash
+cd CekMas
+python -m venv .venv
+pip install -r requirments.txt
+python setup.py
+```
+- Jalankan backend:
+```bash
+cd backend
+uvicorn app:app --reload
+```
+- Jalankan frontend (pastikan sudah ada live-server):
+```bash
+cd ../frontend
+live-server ./user
+live-server ./admin
+```
+
+## Alur Operasi
 **User**  
 - Upload KTP  
 - Isi formulir laporan. Beberapa sudah terisi otomatis.  
