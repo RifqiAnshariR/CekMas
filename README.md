@@ -1,15 +1,15 @@
 # CekMas (Cek Masalah): Aplikasi Pelaporan Publik Berbasis AI
 
 ## MVP
-- **Verifikasi Identitas Otomatis**: OCR KTP untuk ekstraksi NIK, nama, dan jenis kelamin.  
-- **Formulir & Chat Interaktif**: Input laporan, upload bukti, serta respon AI otomatis.  
-- **Analisis AI**: Klasifikasi kategori laporan & analisis sentimen menggunakan SVM.  
-- **Penyimpanan Aman**: Data laporan, KTP, dan bukti tersimpan di SQL & Google Cloud Storage (Blob).  
-- **Dashboard Admin**: Login, pantau laporan, update status real-time.  
-- **Tiket Laporan**: Nomor unik untuk tracking status laporan.  
+- **Verifikasi Identitas Otomatis**: OCR KTP untuk ekstrak NIK, nama, dan jenis kelamin. Fitur *auto fill* formulir identitas.
+- **Analisis AI**: Klasifikasi kategori laporan & analisis sentimen menggunakan model SVM.
+- **Chat Interaktif**: Respon chat cepat. Chatbot berbasis rule-based.
+- **Tiket Laporan**: Nomor unik untuk melacak status laporan.
+- **Penyimpanan Aman**: Informasi pelapor serta foto KTP dan bukti tersimpan di SQL dan Google Cloud Storage (Blob). Penyimpanan foto KTP dan bukti disimpan 30 hari.
+- **Dashboard Admin**: Login dan pantau laporan juga update status real-time laporan.
 
 ## Arsitektur
-- **Frontend**: HTML, CSS, JavaScript (UI minimalis: User & Admin).  
+- **Frontend**: HTML, CSS, JavaScript (UI minimalis: User dan Admin).  
 - **Backend**: Python FastAPI.  
 - **Database**: SQLite.  
 - **Storage**: Google Cloud Storage (Blob).  
@@ -23,8 +23,11 @@
 git clone https://github.com/RifqiAnshariR/CekMas.git
 ```
 - Setup awal Google Cloud Storage (GCS):
-  - Buat storage GCS dan download file key.json.
-  - Buat file .env berisi path ke key.json dan simpan dalam GOOGLE_APPLICATION_CREDENTIALS.
+  - Buat storage GCS di [Google Cloud Console](https://console.cloud.google.com/) dan download file kredensial key.json.
+  - Buat file .env berisi path ke key.json. 
+  ```env
+     GOOGLE_APPLICATION_CREDENTIALS=./path/to/key.json
+  ```
 - Setup awal:
 ```bash
 cd CekMas
@@ -46,13 +49,12 @@ live-server ./admin
 
 ## Alur Operasi
 **User**  
-- Upload KTP  
-- Isi formulir laporan. Beberapa sudah terisi otomatis.  
-- Chat keluhan & upload bukti (opsional)  
-- Mendapat tiket laporan untuk tracking  
+- Upload gambar KTP.  
+- Isi formulir identitas. Beberapa sudah terisi otomatis.  
+- Chat keluhan & upload bukti jika ada.  
+- Mendapat tiket laporan untuk melacak status.  
 
 **Admin**  
-- Login ke dashboard  
-- Memantau daftar laporan  
-- Update status dari "Belum Selesai" ke "Selesai"  
-- Kirim konfirmasi ke user via email (manual)  
+- Login ke dashboard.  
+- Memantau daftar laporan. Dapat update status dari "Belum Selesai" menjadi "Selesai".  
+- Kirim konfirmasi atau tindak lanjut ke user via email secara manual.  
